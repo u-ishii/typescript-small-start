@@ -1,3 +1,1 @@
-function hello(name: String): String {
-    return `Hello, ${name}!`
-}
+console.log('Hello, TypeScript!')
