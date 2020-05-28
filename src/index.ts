@@ -1,6 +1,31 @@
-function hello(name: String): String {
-    return `Hello, ${name}!`
+/**
+ * 長方形の始点（左上）・終点（右下）の座標
+ */
+type Area = {
+    x1: number,
+    y1: number,
+    x2: number,
+    y2: number,
 }
 
-console.log(hello('TypeScript'))
-// console.log(hello(1))
+/**
+ * 長方形の始点（左上）と大きさ
+ */
+type Region = {
+    left: number,
+    top: number,
+    width: number,
+    height: number,
+}
+
+const areaToRegion = (area: Area): Region => {
+    return {
+        left: area.x1,
+        top: area.y1,
+        width: area.x2 - area.x1,
+        height: area.y2 - area.y1,
+    }
+}
+
+areaToRegion({ x1: 10, y1: 10, x2: 20, y2: 20 })
+// areaToRegion({x1: 10, y1: 10, x2: 20}) // Property 'y2' is missing
