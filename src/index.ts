@@ -1,3 +1,5 @@
+export { Area, Region, areaToRegion }
+
 /**
  * 長方形の始点（左上）・終点（右下）の座標
  */
@@ -27,5 +29,6 @@ const areaToRegion = (area: Area): Region => {
     }
 }
 
-areaToRegion({ x1: 10, y1: 10, x2: 20, y2: 20 })
-// areaToRegion({x1: 10, y1: 10, x2: 20}) // Property 'y2' is missing
+areaToRegion({ x1: 1, y1: 2, x2: 3, y2: 4 }) // OK
+// areaToRegion({ x1: 10, y1: 10, x2: 20 }) // Property 'y2' is missing
+
