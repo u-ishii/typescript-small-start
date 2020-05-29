@@ -1,5 +1,3 @@
-export { Area, Region, areaToRegion }
-
 /**
  * 長方形の始点（左上）・終点（右下）の座標
  */
@@ -28,3 +26,5 @@ const areaToRegion = (area: Area): Region => {
         height: area.y2 - area.y1,
     }
 }
+
+export { Area, Region, areaToRegion }
